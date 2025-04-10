@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: tutorial-server
+  namespace: default
+spec:
+  type: LoadBalancer
+  selector:
+    app: tutorial-server
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
